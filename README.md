@@ -1,0 +1,2 @@
+# AnExactSolution
+Simulation code for "An exact solution for choosing the largest measurement from a sample drawn from an uniform distribution"
