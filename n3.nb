@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5681,        178]
-NotebookOptionsPosition[      4543,        149]
-NotebookOutlinePosition[      4944,        165]
-CellTagsIndexPosition[      4901,        162]
+NotebookDataLength[     28847,        872]
+NotebookOptionsPosition[     24001,        770]
+NotebookOutlinePosition[     24403,        786]
+CellTagsIndexPosition[     24360,        783]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -145,10 +145,631 @@ Cell[BoxData[
  CellChangeTimes->{3.821129780739771*^9, 3.821129846038436*^9, 
   3.821129960583128*^9},
  CellLabel->"Out[14]=",ExpressionUUID->"78d85118-677b-4afa-afe0-ecaef51a2571"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test", "Subsection",
+ CellChangeTimes->{{3.821179251961339*^9, 3.82117926227483*^9}, {
+  3.821179491409424*^9, 
+  3.821179491908003*^9}},ExpressionUUID->"a9ef3655-57f2-4a62-b162-\
+ae9f7e01ffc0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", "1"], ">", 
+      SubscriptBox["k", "1"]}], ",", 
+     RowBox[{
+      SubscriptBox["a", "1"], "\[Distributed]", 
+      RowBox[{"UniformDistribution", "[", "]"}]}]}], "]"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.821178755150126*^9, 3.8211787597151127`*^9}, {
+  3.821178839589374*^9, 3.82117892083959*^9}, {3.821179156661436*^9, 
+  3.821179159950684*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"efc692c4-0dcb-4874-b2d7-d23f1b188862"],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  SubscriptBox["k", "1"]}]], "Output",
+ CellChangeTimes->{3.8211788883139153`*^9, 3.82117892110474*^9, 
+  3.821179160536153*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"929c3489-9d3a-4a27-afcf-4718dc2cd999"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Max", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox["a", "1"], ",", 
+         SubscriptBox["a", "2"], ",", 
+         SubscriptBox["a", "3"]}], "}"}], "]"}], ">", 
+      SubscriptBox["k", "1"]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.8211790773940372`*^9}, {3.821179163477851*^9, 
+  3.821179166182671*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"fccd302c-089a-4cfa-8dcf-c970c96e8191"],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  SubsuperscriptBox["k", "1", "3"]}]], "Output",
+ CellChangeTimes->{3.8211789775055943`*^9, 3.821179079127158*^9, 
+  3.821179166562883*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"88b82a62-026f-4ffd-b6a1-3d7d1d2ffd6a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Round 1", "Subsection",
+ CellChangeTimes->{{3.821179251961339*^9, 
+  3.82117926227483*^9}},ExpressionUUID->"844bfb7c-8c85-48fe-aa19-\
+a54b4ebf55f6"],
+
+Cell[CellGroupData[{
+
+Cell["TP", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179273425021*^9}},ExpressionUUID->"fc4c0cc3-d71f-4ff8-8e11-\
+b887c4bee9b0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[Equal]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], ">", 
+       SubscriptBox["k", "1"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.821179172787513*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"004ef503-4ce1-4731-b625-55065d4e2bf7"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "3"], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "-", 
+    SubsuperscriptBox["k", "1", "3"]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.8211791184275827`*^9, 3.82117917316586*^9}},
+ CellLabel->"Out[31]=",ExpressionUUID->"6ef38879-16c1-4f54-b07b-d19789f4c6dd"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FN", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179298085005*^9}},ExpressionUUID->"dd0bbdbb-393d-4c4d-ad25-\
+86361a1f4e8d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[Equal]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.8211791945672493`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"4f7d45d4-7445-4295-a305-310d9b9f51ab"],
+
+Cell[BoxData[
+ FractionBox[
+  SubsuperscriptBox["k", "1", "3"], "3"]], "Output",
+ CellChangeTimes->{3.821179195222159*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"1877d456-9367-43f3-a10f-82001abd15e3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FP", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.8211792869169273`*^9}},ExpressionUUID->"98620bd6-fcd4-4ce3-86da-\
+73bed57d59b3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], ">", 
+       SubscriptBox["k", "1"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.821179172787513*^9}, {3.821179203340364*^9, 
+  3.821179207556341*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"3094bd60-952a-4ac5-b97f-6f1b73ff4f10"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "3"], " ", 
+  RowBox[{"(", 
+   RowBox[{"2", "-", 
+    RowBox[{"3", " ", 
+     SubscriptBox["k", "1"]}], "+", 
+    SubsuperscriptBox["k", "1", "3"]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8211792090724163`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"3156cf2d-33b5-4d09-b46a-895cf6bb7020"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["TN", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179292480291*^9}},ExpressionUUID->"d80a5ce0-dbb6-4283-8da6-\
+e7f889e21a26"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{"0", "<", 
+    SubscriptBox["k", "1"], "<", "1"}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.821179172787513*^9}, {3.821179228879652*^9, 
+  3.821179232941783*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"c56150cd-9d34-4b80-9316-12917a67ff71"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["k", "1"], "-", 
+  FractionBox[
+   SubsuperscriptBox["k", "1", "3"], "3"]}]], "Output",
+ CellChangeTimes->{3.821179233340164*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"f9ffb4db-aa4b-4d06-9062-9ce00f4f49fa"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Round 2", "Subsection",
+ CellChangeTimes->{{3.821179251961339*^9, 3.82117926227483*^9}, 
+   3.821179310913211*^9},ExpressionUUID->"9db3a6fc-3dd3-42d3-a8f5-\
+c3bb32c89cb6"],
+
+Cell[CellGroupData[{
+
+Cell["TP", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179273425021*^9}},ExpressionUUID->"5dde5a67-676e-4d14-9e6e-\
+59b0339c9ffb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "1"], "<", "1"}], "&&", 
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "2"], "<", "1"}], "&&", 
+    RowBox[{
+     SubscriptBox["k", "2"], "<", 
+     SubscriptBox["k", "1"]}]}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}], "&&", 
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[Equal]", 
+       SubscriptBox["a", "2"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], ">", 
+       SubscriptBox["k", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+  3.821179021530788*^9, 3.821179172787513*^9}, {3.82117932607897*^9, 
+  3.821179342692605*^9}, {3.821179375552944*^9, 3.821179388223061*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"bc95eabd-b632-427f-8ca4-9eec4b7c7076"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "6"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"3", " ", 
+     SubscriptBox["k", "1"]}], "-", 
+    SubsuperscriptBox["k", "1", "3"], "-", 
+    RowBox[{"2", " ", 
+     SubsuperscriptBox["k", "2", "3"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.8211791184275827`*^9, 3.82117917316586*^9}, 
+   3.821179389630785*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"2839388a-0793-4f45-a9f7-0c712fe817cf"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FN", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179298085005*^9}},ExpressionUUID->"0a4954f8-94a1-4070-bc81-\
+dbb20446a55a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "1"], "<", "1"}], "&&", 
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "2"], "<", "1"}], "&&", 
+    RowBox[{
+     SubscriptBox["k", "2"], "<", 
+     SubscriptBox["k", "1"]}]}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}], "&&", 
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[Equal]", 
+       SubscriptBox["a", "2"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "<", 
+       SubscriptBox["k", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+   3.821179021530788*^9, 3.8211791945672493`*^9}, 3.821179352314143*^9, {
+   3.821179413191924*^9, 3.821179424960713*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"4e1bc254-72b7-4f21-8b3f-f1795df70b33"],
+
+Cell[BoxData[
+ FractionBox[
+  SubsuperscriptBox["k", "2", "3"], "3"]], "Output",
+ CellChangeTimes->{3.821179195222159*^9, 3.821179426140737*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"0b7683a8-b6c5-4ea8-a2da-00e0fe292bed"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FP", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.8211792869169273`*^9}},ExpressionUUID->"354b3872-a51d-45d2-a5dd-\
+9b0797c048d7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "1"], "<", "1"}], "&&", 
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "2"], "<", "1"}], "&&", 
+    RowBox[{
+     SubscriptBox["k", "2"], "<", 
+     SubscriptBox["k", "1"]}]}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}], "&&", 
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "2"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], ">", 
+       SubscriptBox["k", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+   3.821179021530788*^9, 3.821179172787513*^9}, {3.821179203340364*^9, 
+   3.821179207556341*^9}, 3.8211793565481663`*^9, {3.82117943125392*^9, 
+   3.821179444427387*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"d6ef7aca-35e6-40ed-b658-0ca3f1672ad5"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "6"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", 
+     SubsuperscriptBox["k", "1", "3"]}], "+", 
+    RowBox[{
+     SubscriptBox["k", "1"], " ", 
+     RowBox[{"(", 
+      RowBox[{"3", "-", 
+       RowBox[{"6", " ", 
+        SubscriptBox["k", "2"]}]}], ")"}]}], "+", 
+    RowBox[{"3", " ", 
+     SubsuperscriptBox["k", "1", "2"], " ", 
+     SubscriptBox["k", "2"]}], "+", 
+    SubsuperscriptBox["k", "2", "3"]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8211792090724163`*^9, 3.82117944619839*^9},
+ CellLabel->"Out[37]=",ExpressionUUID->"88097739-a554-44db-bae7-b196f89b01a0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["TN", "Subsubsection",
+ CellChangeTimes->{{3.821179267235588*^9, 
+  3.821179292480291*^9}},ExpressionUUID->"95803e8e-46ac-45b4-967f-\
+a8a12632a27b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Assuming", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "1"], "<", "1"}], "&&", 
+    RowBox[{"0", "<", 
+     SubscriptBox["k", "2"], "<", "1"}], "&&", 
+    RowBox[{
+     SubscriptBox["k", "2"], "<", 
+     SubscriptBox["k", "1"]}]}], ",", 
+   RowBox[{"Probability", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "1"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "1"], "<", 
+       SubscriptBox["k", "1"]}], "&&", 
+      RowBox[{
+       RowBox[{"Max", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["a", "1"], ",", 
+          SubscriptBox["a", "2"], ",", 
+          SubscriptBox["a", "3"]}], "}"}], "]"}], "\[NotEqual]", 
+       SubscriptBox["a", "2"]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "<", 
+       SubscriptBox["k", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["a", "1"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "2"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}], "&&", 
+      RowBox[{
+       SubscriptBox["a", "3"], "\[Distributed]", 
+       RowBox[{"UniformDistribution", "[", "]"}]}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8211789443308153`*^9, 3.821178975893749*^9}, {
+   3.821179021530788*^9, 3.821179172787513*^9}, {3.821179228879652*^9, 
+   3.821179232941783*^9}, 3.821179359474073*^9, {3.821179455533003*^9, 
+   3.8211794644065733`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"d30ba3e2-789d-4af9-a511-b60f638c6c80"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "6"]}], " ", 
+  SubscriptBox["k", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "6"}], " ", 
+     SubscriptBox["k", "1"]}], "+", 
+    RowBox[{"3", " ", 
+     SubsuperscriptBox["k", "1", "2"]}], "+", 
+    SubsuperscriptBox["k", "2", "2"]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.821179233340164*^9, 3.821179466153783*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"4b430be6-d1ba-4e43-8797-eb432d40ac8e"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{468, 742},
-WindowMargins->{{Automatic, -702}, {-501, Automatic}},
+WindowSize->{1490, 1614},
+WindowMargins->{{Automatic, -1872}, {Automatic, 91}},
 FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"1fdf913c-e912-45f7-bc08-f7d6bce6130e"
@@ -173,12 +794,85 @@ Cell[1070, 38, 800, 24, 53, "Input",ExpressionUUID->"6952e930-f35e-4661-a17e-dad
 Cell[1873, 64, 450, 12, 54, "Output",ExpressionUUID->"3869fc74-4d0c-4229-91bd-603194820fa4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2360, 81, 875, 26, 76, "Input",ExpressionUUID->"81b8bac1-257e-49d7-a0cd-9474159b0ea3"],
+Cell[2360, 81, 875, 26, 53, "Input",ExpressionUUID->"81b8bac1-257e-49d7-a0cd-9474159b0ea3"],
 Cell[3238, 109, 588, 15, 53, "Output",ExpressionUUID->"d9f665e0-49e0-4a86-a179-852c4ab194e9"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[3863, 129, 207, 3, 30, "Input",ExpressionUUID->"6ed593ea-db8f-4b3d-9d85-e2c071cfb044"],
 Cell[4073, 134, 454, 12, 54, "Output",ExpressionUUID->"78d85118-677b-4afa-afe0-ecaef51a2571"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4564, 151, 200, 4, 54, "Subsection",ExpressionUUID->"a9ef3655-57f2-4a62-b162-ae9f7e01ffc0"],
+Cell[CellGroupData[{
+Cell[4789, 159, 640, 17, 30, "Input",ExpressionUUID->"efc692c4-0dcb-4874-b2d7-d23f1b188862"],
+Cell[5432, 178, 241, 5, 34, "Output",ExpressionUUID->"929c3489-9d3a-4a27-afcf-4718dc2cd999"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5710, 188, 1073, 29, 30, "Input",ExpressionUUID->"fccd302c-089a-4cfa-8dcf-c970c96e8191"],
+Cell[6786, 219, 252, 5, 36, "Output",ExpressionUUID->"88b82a62-026f-4ffd-b6a1-3d7d1d2ffd6a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7087, 230, 154, 3, 54, "Subsection",ExpressionUUID->"844bfb7c-8c85-48fe-aa19-a54b4ebf55f6"],
+Cell[CellGroupData[{
+Cell[7266, 237, 153, 3, 45, "Subsubsection",ExpressionUUID->"fc4c0cc3-d71f-4ff8-8e11-b887c4bee9b0"],
+Cell[CellGroupData[{
+Cell[7444, 244, 1145, 32, 30, "Input",ExpressionUUID->"004ef503-4ce1-4731-b625-55065d4e2bf7"],
+Cell[8592, 278, 298, 7, 51, "Output",ExpressionUUID->"6ef38879-16c1-4f54-b07b-d19789f4c6dd"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8939, 291, 153, 3, 45, "Subsubsection",ExpressionUUID->"dd0bbdbb-393d-4c4d-ad25-86361a1f4e8d"],
+Cell[CellGroupData[{
+Cell[9117, 298, 1147, 32, 30, "Input",ExpressionUUID->"4f7d45d4-7445-4295-a305-310d9b9f51ab"],
+Cell[10267, 332, 201, 4, 54, "Output",ExpressionUUID->"1877d456-9367-43f3-a10f-82001abd15e3"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10517, 342, 155, 3, 45, "Subsubsection",ExpressionUUID->"98620bd6-fcd4-4ce3-86da-73bed57d59b3"],
+Cell[CellGroupData[{
+Cell[10697, 349, 1197, 33, 30, "Input",ExpressionUUID->"3094bd60-952a-4ac5-b97f-6f1b73ff4f10"],
+Cell[11897, 384, 335, 9, 51, "Output",ExpressionUUID->"3156cf2d-33b5-4d09-b46a-895cf6bb7020"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12281, 399, 153, 3, 45, "Subsubsection",ExpressionUUID->"d80a5ce0-dbb6-4283-8da6-e7f889e21a26"],
+Cell[CellGroupData[{
+Cell[12459, 406, 1197, 33, 30, "Input",ExpressionUUID->"c56150cd-9d34-4b80-9316-12917a67ff71"],
+Cell[13659, 441, 247, 6, 54, "Output",ExpressionUUID->"f9ffb4db-aa4b-4d06-9062-9ce00f4f49fa"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13967, 454, 177, 3, 54, "Subsection",ExpressionUUID->"9db3a6fc-3dd3-42d3-a8f5-c3bb32c89cb6"],
+Cell[CellGroupData[{
+Cell[14169, 461, 153, 3, 45, "Subsubsection",ExpressionUUID->"5dde5a67-676e-4d14-9e6e-59b0339c9ffb"],
+Cell[CellGroupData[{
+Cell[14347, 468, 1773, 50, 52, "Input",ExpressionUUID->"bc95eabd-b632-427f-8ca4-9eec4b7c7076"],
+Cell[16123, 520, 444, 12, 51, "Output",ExpressionUUID->"2839388a-0793-4f45-a9f7-0c712fe817cf"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16616, 538, 153, 3, 45, "Subsubsection",ExpressionUUID->"0a4954f8-94a1-4070-bc81-dbb20446a55a"],
+Cell[CellGroupData[{
+Cell[16794, 545, 1754, 50, 52, "Input",ExpressionUUID->"4e1bc254-72b7-4f21-8b3f-f1795df70b33"],
+Cell[18551, 597, 223, 4, 54, "Output",ExpressionUUID->"0b7683a8-b6c5-4ea8-a2da-00e0fe292bed"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18823, 607, 155, 3, 45, "Subsubsection",ExpressionUUID->"354b3872-a51d-45d2-a5dd-9b0797c048d7"],
+Cell[CellGroupData[{
+Cell[19003, 614, 1806, 51, 52, "Input",ExpressionUUID->"d6ef7aca-35e6-40ed-b658-0ca3f1672ad5"],
+Cell[20812, 667, 625, 18, 51, "Output",ExpressionUUID->"88097739-a554-44db-bae7-b196f89b01a0"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21486, 691, 153, 3, 45, "Subsubsection",ExpressionUUID->"95803e8e-46ac-45b4-967f-a8a12632a27b"],
+Cell[CellGroupData[{
+Cell[21664, 698, 1807, 51, 52, "Input",ExpressionUUID->"d30ba3e2-789d-4af9-a511-b60f638c6c80"],
+Cell[23474, 751, 487, 14, 51, "Output",ExpressionUUID->"4b430be6-d1ba-4e43-8797-eb432d40ac8e"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
